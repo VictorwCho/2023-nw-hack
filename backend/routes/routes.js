@@ -32,6 +32,7 @@ router.delete('/delete/:id', (req, res) => {
 
 //Create new sub listing
 router.post("/addListing", async (req,res) => {
+    console.log(req.body)
     const listings = new Listing({
         firstName: req.body.firstName,
         lastName: req.body.lastName,
