@@ -9,4 +9,24 @@ body {
 section {
     width: 50%;
     max-width:70%;
+    justify-content: center;
+    display:flex;
+    flex-wrap:wrap;
+}
+
+form {
+    flex: 100%;
+}
+
+button {
+    background-color: #293637;
+    color: white;   
+    width: 300px;
+    margin-top: 0.5em;
+}
+
+.cancelbtn {
+    display: flex;
+    justify-content: center;
+    
 }

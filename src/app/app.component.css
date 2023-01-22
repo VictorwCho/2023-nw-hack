@@ -13,3 +13,18 @@ body {
     flex:100%;
     margin: 0.5em;
 }
+
+#nav-logo:hover {
+    cursor: pointer;
+}
+
+a {
+    font-weight: 500;
+    padding: 1em;
+    margin: 0.5em;
+    width: 130px;
+}
+
+a:hover {
+    background-color: #375152;
+}
