@@ -5,6 +5,7 @@ import { DashboardComponent } from './dashboard/dashboard.component';
 import { LoginComponent } from './login/login.component';
 import { RegisterComponent } from './register/register.component';
 import { FindSubListingComponent } from './find-sub-listing/find-sub-listing.component';
+import { ListingsResolver } from './listings.resolver';
 
 const routes: Routes = [
   { path: '', component: DashboardComponent},
@@ -13,7 +14,7 @@ const routes: Routes = [
   { path: 'dashboard', component: DashboardComponent},
   { path: 'register', component: RegisterComponent},
   { path: 'dashboard', component: DashboardComponent},
-  { path: 'find-subs', component: FindSubListingComponent},
+  { path: 'find-subs', component: FindSubListingComponent, resolve: { message: ListingsResolver }},
   { path: 'add-listing', component: AddPostComponent}
   ]
 
