@@ -1,31 +1,31 @@
 <main>
 <h1 class="display-3">
-    FIND A SUB!
+    Find A Sub
   </h1>
 
 <form
 [formGroup] = "form"
 (ngSubmit)="onSubmit(form.value)">
-    <table class="bg-white table-auto shadow-lg">
+    <table class="bg-white table shadow-lg">
     <thead>
     </thead>
     <tr>
         <td class="border border-slate-400"><label for="firstName">First Name</label></td>
-        <td class="border border-slate-400"><input id="firstName" type="text" formControlName="firstName"></td>
+        <td class="border border-slate-400"><input id="firstName" class="form-control" type="text" formControlName="firstName"></td>
     </tr>
 
     <tr>
         <td class="border border-slate-400"><label for="lastName">Last Name</label></td>
-        <td class="border border-slate-400"><input id="lastName" type="text" formControlName="lastName"></td>
+        <td class="border border-slate-400"><input id="lastName" class="form-control" type="text" formControlName="lastName"></td>
     </tr>
 
     <tr>
         <td class="border border-slate-400"><label for="date">Date</label></td>
-        <td id='form-date' class="border border-slate-400"><input id="date" type="date" formControlName="date"></td>
+        <td id='form-date' class="border border-slate-400"><input id="date" class="form-control" type="date" formControlName="date"></td>
     </tr>
     <tr>
         <td class="border border-slate-400"><label for="sport">Sport</label></td>
-        <td class="border border-slate-400"><select id="sport" formControlName="sport">
+        <td class="border border-slate-400"><select id="sport" class="form-control" formControlName="sport">
             <option value="volleyball">Volleyball</option>
             <option value="soccer">Soccer</option>
             <option value="basketball">Basketball</option>
@@ -36,27 +36,30 @@
 
     <tr>
         <td class="border border-slate-400"><label for="location">Location</label></td>
-        <td class="border border-slate-400"><input id="location" type="text" formControlName="location"></td>
+        <td class="border border-slate-400"><input id="location" class="form-control" type="text" formControlName="location"></td>
     </tr>
 
     <tr>
         <td class="border border-slate-400"><label for="gender">Gender</label></td>
-        <td class="border border-slate-400"><input id="gender" type="text" formControlName="gender"></td>
+        <td class="border border-slate-400"><input id="gender" class="form-control" type="text" formControlName="gender"></td>
     </tr>
 
     <tr>
         <td class="border border-slate-400"><label for="skillLevel">Skill Level</label></td>
-        <td class="border border-slate-400"><input id="skillLevel" type="text" formControlName="skillLevel"></td>
+        <td class="border border-slate-400"><input id="skillLevel" class="form-control" type="text" formControlName="skillLevel"></td>
     </tr>
 
     <tr>
         <td class="border border-slate-400"><label for="position">Position</label></td>
-        <td class="border border-slate-400"><input id="position" type="text" formControlName="position"></td>
+        <td class="border border-slate-400"><input id="position" type="text" class="form-control" formControlName="position"></td>
     </tr>
 
     </table>
 
     <button id="form-submit" class="btn btn-dark">Submit</button>
 </form>
-<button id="form-cancel" class="btn btn-dark">Cancel</button>
+
+<div id="add-bottom">
+<button id="form-cancel" class="btn btn-dark" (click)="onCancel()">Cancel</button>
+</div>
 </main>

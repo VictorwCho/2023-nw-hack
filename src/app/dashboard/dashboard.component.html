@@ -1,11 +1,35 @@
 <!-- <body class="bg-gray-400 m-0"> -->
 <main>
 <section id="dashboard-btns" class="p-3">
-<ng-template ngFor let-sport [ngForOf]="sports" class="template">
-  <button class="card shadow-sm mb-2 display-6" (click)="navigateTo($event)">
-    {{sport}}
-  </button>
-</ng-template>
+<!-- <ng-template ngFor let-sport [ngForOf]="sports" class="template"> -->
+  <div id="findteams" class="shadow-sm mb-2 display-6 dashboard-btn" (click)="navigateTo('Find Teams')">
+    <div class="opacbox">
+    <p>Find Teams</p>
+    </div>
+  </div>
+  <div id="findsubs" class="shadow-sm mb-2 display-6 dashboard-btn" (click)="navigateTo('Find Subs')">
+    <div class="opacbox">
+    <p>Find Subs</p>
+  </div>
+  </div>
+  <div id="pickup" class="shadow-sm mb-2 display-6 dashboard-btn" (click)="navigateTo('Pick-Up Events')">
+    <div class="opacbox">
+    <p>Pick-Up Games</p>
+    </div>
+  </div>
+  <div id="workshops" class="shadow-sm mb-2 display-6 dashboard-btn" (click)="navigateTo('Workshops')">
+    <div class="opacbox">
+    <p>Workshops</p>
+    </div>
+  </div>
+<!--   
+  <div id="myaccount" class="shadow-sm mb-2 display-6 dashboard-btn" (click)="navigateTo('My Account')">
+    <div class="opacbox">
+    <p>My Account</p>
+    </div>
+  </div> -->
+
+<!-- </ng-template> -->
 </section>
 </main>
 

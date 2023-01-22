@@ -3,6 +3,11 @@ main {
     height: 100%;
 }
 
+#add-bottom {
+    display:flex;
+    justify-content: center;
+}
+
 td {
     padding: 1em;
 }
@@ -11,10 +16,14 @@ form {
     margin-top: 1%;
     margin-left: 5%;
     margin-right: 5%;
+    display:flex;
+    justify-content: center;
+    flex-wrap:wrap;
 }
 
 table {
-    width: 100%;
+    flex: 100%;
+    max-width: 70%
 }
 
 h1 {
@@ -23,16 +32,16 @@ h1 {
 }
 
 button {
-    margin: 1em;
-    width: 60%;
+    margin: 10px; 
+    width: 36%;
 }
 
 #form-submit {
-    width: 100%;
+    width: 40%;
 }
 
 #date, #sport, #firstName, #lastName, #location, #skillLevel, #position {
-    width: 100%;
+    width: 80%;
     text-align: center;
 }
 
