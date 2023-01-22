@@ -6,6 +6,7 @@ import { LoginComponent } from './login/login.component';
 import { RegisterComponent } from './register/register.component';
 import { FindSubListingComponent } from './find-sub-listing/find-sub-listing.component';
 import { AccountComponent } from './account/account.component';
+import { ListingsResolver } from './listings.resolver';
 
 const routes: Routes = [
   { path: '', redirectTo:'login', pathMatch:'full'},
@@ -14,8 +15,10 @@ const routes: Routes = [
   { path: 'register', component: RegisterComponent},
   { path: 'dashboard', component: DashboardComponent},
   { path: 'find teams', component: FindSubListingComponent},
-  { path: 'find subs', component: AddPostComponent},
   { path: 'account', component: AccountComponent}
+
+  { path: 'find teams', component: FindSubListingComponent, resolve: { message:ListingsResolver }},
+  { path: 'find subs', component: AddPostComponent}
   ]
 
 
