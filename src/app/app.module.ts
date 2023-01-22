@@ -10,34 +10,35 @@ import {FirebaseUIModule, firebase, firebaseui} from 'firebaseui-angular';
 import {AngularFireModule} from '@angular/fire/compat';
 import {AngularFireAuthModule} from '@angular/fire/compat/auth';
 import { environment } from '../environment';
+import { ReactiveFormsModule } from '@angular/forms';
 
-const firebaseUiAuthConfig: firebaseui.auth.Config = {
-  signInFlow: 'popup',
-  signInOptions: [
-      {
-          scopes: [
-              'public_profile',
-              'email',
-              'user_likes',
-              'user_friends'
-          ],
-          customParameters: {
-              'auth_type': 'reauthenticate'
-          },
-          provider: firebase.auth.FacebookAuthProvider.PROVIDER_ID
-      },
-      {
-          requireDisplayName: false,
-          provider: firebase.auth.EmailAuthProvider.PROVIDER_ID
-      },
-  ],
-  //term of service
-  tosUrl: '<your-tos-link>',
-  //privacy url
-  privacyPolicyUrl: '<your-privacyPolicyUrl-link>',
-  //credentialHelper: firebaseui.auth.CredentialHelper.ACCOUNT_CHOOSER_COM
-  credentialHelper: firebaseui.auth.CredentialHelper.NONE
-};
+// const firebaseUiAuthConfig: firebaseui.auth.Config = {
+//   signInFlow: 'popup',
+//   signInOptions: [
+//       {
+//           scopes: [
+//               'public_profile',
+//               'email',
+//               'user_likes',
+//               'user_friends'
+//           ],
+//           customParameters: {
+//               'auth_type': 'reauthenticate'
+//           },
+//           provider: firebase.auth.FacebookAuthProvider.PROVIDER_ID
+//       },
+//       {
+//           requireDisplayName: false,
+//           provider: firebase.auth.EmailAuthProvider.PROVIDER_ID
+//       },
+//   ],
+//   //term of service
+//   tosUrl: '<your-tos-link>',
+//   //privacy url
+//   privacyPolicyUrl: '<your-privacyPolicyUrl-link>',
+//   //credentialHelper: firebaseui.auth.CredentialHelper.ACCOUNT_CHOOSER_COM
+//   credentialHelper: firebaseui.auth.CredentialHelper.NONE
+// };
 
 @NgModule({
   declarations: [
@@ -48,9 +49,10 @@ const firebaseUiAuthConfig: firebaseui.auth.Config = {
   imports: [
     BrowserModule,
     AppRoutingModule,
-    AngularFireModule.initializeApp(environment.firebaseConfig),
-    AngularFireAuthModule,
-    FirebaseUIModule.forRoot(firebaseUiAuthConfig),
+    ReactiveFormsModule
+    // AngularFireModule.initializeApp(environment.firebaseConfig),
+    // AngularFireAuthModule,
+    // FirebaseUIModule.forRoot(firebaseUiAuthConfig),
   ],
   providers: [],
   bootstrap: [AppComponent]

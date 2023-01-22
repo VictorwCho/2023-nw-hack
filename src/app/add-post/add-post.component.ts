@@ -1,5 +1,5 @@
 import { Component } from '@angular/core';
-import { FormControl, FormGroup } from '@angular/forms';
+import { FormControl, FormGroup, ReactiveFormsModule } from '@angular/forms';
 
 @Component({
   selector: 'app-add-post',
@@ -21,9 +21,21 @@ export class AddPostComponent {
       skillLevel: new FormControl(""),
       position: new FormControl("")
     }
-
     this.form = new FormGroup(formControls)
   }
 
+  onSubmit(values:any) {
+    let listing = {
+      firstName: values.firstName,
+      lastName: values.lastName,
+      date: values.date,
+      sport: values.sport,
+      location: values.location,
+      gender: values.gender,
+      skillLevel: values.skillLevel,
+      position: values.position
+    }
 
+    
+  }
 }

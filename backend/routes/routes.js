@@ -27,4 +27,33 @@ router.get('/getAll', (req, res) => {
 router.delete('/delete/:id', (req, res) => {
     res.send('delete by ID API')
 })
+
+//Create new sub listing
+router.post("/add", async (req,res) => {
+    const listings = new Model({
+        firstName: req.body.firstName,
+        lastName: req.body.lastName,
+        date: req.body.date,
+        sport: req.body.sport,
+        location: req.body.location,
+        gender: req.body.gender,
+        skillLevel: req.body.skillLevel,
+        position: req.body.position
+    })
+   
+    try {
+        const listing = req.body;
+        const result = await collections.listings.insertOne(listing)
+
+        if (result.acknowledged) {
+            res.status(201).send("Created new listing")
+        } else {
+            res.status(500).send("Failed to create new listing")
+        }
+    } catch (error) {
+        console.error(error);
+        res.status(400).send(error.message)
+    }
+})
+
 module.exports = router;
