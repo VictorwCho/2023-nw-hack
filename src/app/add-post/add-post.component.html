@@ -1,7 +1,5 @@
-
-
-<h1 class="text-3xl font-bold underline">
-    Hello world!
+<h1 class="text-3xl font-bold">
+    Find A Sub!
   </h1>
 
 <form
@@ -9,8 +7,6 @@
 (ngSubmit)="onSubmit(form.value)">
     <table class="bg-white table-auto shadow-lg">
     <thead>
-        <th>Test</th>
-        <th>Test</th>
     </thead>
     <tr>
         <td class="border border-slate-400"><label for="firstName">First Name</label></td>
@@ -24,7 +20,7 @@
 
     <tr>
         <td class="border border-slate-400"><label for="date">Date</label></td>
-        <td class="border border-slate-400"><input id="date" type="date" formControlName="date"></td>
+        <td id='form-date' class="border border-slate-400"><input id="date" type="date" formControlName="date"></td>
     </tr>
     <tr>
         <td class="border border-slate-400"><label for="sport">Sport</label></td>
@@ -59,6 +55,6 @@
 
     </table>
 
-    <button>Submit</button>
+    <button id="form-submit">Submit</button>
 </form>
-<button>Cancel</button>
+<button id="form-cancel">Cancel</button>

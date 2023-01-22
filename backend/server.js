@@ -12,7 +12,6 @@ app.use(cors());
 app.use(express.json());
 app.use('/api', routes);
 
-
 mongoose.connect(mongoString);
 const database = mongoose.connection;
 

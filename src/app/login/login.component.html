@@ -1,49 +1,31 @@
 <body>
 <section>
 
- <!-- <img class="backdrop-blur-md bg-white/30" src="./assets/login.jpg"/> -->
+<h1 class="text-center p-3">Login!</h1>
 
-
-<form>
-  <div class="form-group">
-    <label for="exampleInputEmail1">Email address</label>
+<form class="m-3">
+  <div class="form-group p-2">
+    <label class="p-1" for="exampleInputEmail1">Email address</label>
     <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Enter email" name="email" 
     [(ngModel)]="email">
-    <small id="emailHelp" class="form-text text-muted">We'll never share your email with anyone else.</small>
+    <small id="emailHelp" class="form-text text-muted p-2">We'll never share your email with anyone else.</small>
   </div>
-  <div class="form-group">
-    <label for="exampleInputPassword1">Password</label>
+  <div class="form-group p-2">
+    <label class="p-1" for="exampleInputPassword1">Password</label>
     <input type="password" class="form-control" id="exampleInputPassword1" placeholder="Password" id="inline-password" type="password" name="password" [(ngModel)]="password">
+    <small id="noAccount" class="text-primary form-text p-2 btn" routerLink="/register">
+    Don't have an account?</small>
   </div>
+  <div class="text-center">
   <button type="submit" class="btn btn-primary" (click)=login()>Submit </button>
+  </div>
+  
 </form>
 
 
 
 
-<form class="card">
-  <!-- <label class="block text-gray-500 font-bold md:text-right" for="inline-email">
-    Email
-  </label> -->
-  <!-- <input id="inline-email" type="email" name="email" placeholder="Email"
-    [(ngModel)]="email" /> -->
-  <!-- <label class="block text-gray-500 font-bold md:text-right"
-    for="inline-password">
-    Password
-  </label> -->
-  <input id="inline-password" type="password" name="password"
-    placeholder="Password" [(ngModel)]="password" />
 
-
-
-  <input class="btn btn-primary" type="submit" (click)=login()/>
-
-
-
-  <button type="button" class="btn btn-info" routerLink="/register">Don't have an account?</button>
-
-
-</form>
 
 
 </section>

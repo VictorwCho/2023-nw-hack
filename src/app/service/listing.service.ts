@@ -32,8 +32,8 @@ export class ListingService {
   }
 
   addListing(listing:any) {
-    console.log("add service")
-    console.log(this.url)
-    return this.httpClient.post(`${this.url}/api/addListing`,listing, {responseType: 'text'})
+    this.httpClient.post(`${this.url}/api/addListing`, listing).subscribe(data => {
+      console.log(data)
+    })
   }
 }
