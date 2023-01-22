@@ -10,6 +10,8 @@ export class RegisterComponent {
 
 email : string = '';
 password : string = '';
+firstName : string = '';
+lastName : string = '';
 
 
 constructor(private auth : AuthService) {}
@@ -35,6 +37,8 @@ register(){
   this.auth.register(this.email,this.password);
   this.email = '';
   this.password = '';
+  this.lastName = '';
+  this.firstName = '';
 
 
 }
