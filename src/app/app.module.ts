@@ -9,7 +9,7 @@ import { FindSubListingComponent } from './find-sub-listing/find-sub-listing.com
 import {FirebaseUIModule, firebase, firebaseui} from 'firebaseui-angular';
 import {AngularFireModule} from '@angular/fire/compat';
 import {AngularFireAuthModule} from '@angular/fire/compat/auth';
-import { environment } from 'src/environment';
+import { environment } from '../environment';
 
 const firebaseUiAuthConfig: firebaseui.auth.Config = {
   signInFlow: 'popup',
