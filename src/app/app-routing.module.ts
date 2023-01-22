@@ -5,6 +5,7 @@ import { DashboardComponent } from './dashboard/dashboard.component';
 import { LoginComponent } from './login/login.component';
 import { RegisterComponent } from './register/register.component';
 import { FindSubListingComponent } from './find-sub-listing/find-sub-listing.component';
+import { AccountComponent } from './account/account.component';
 
 const routes: Routes = [
   { path: '', redirectTo:'login', pathMatch:'full'},
@@ -13,7 +14,8 @@ const routes: Routes = [
   { path: 'register', component: RegisterComponent},
   { path: 'dashboard', component: DashboardComponent},
   { path: 'find teams', component: FindSubListingComponent},
-  { path: 'find subs', component: AddPostComponent}
+  { path: 'find subs', component: AddPostComponent},
+  { path: 'account', component: AccountComponent}
   ]
 
 

@@ -20,6 +20,7 @@ import { CommonModule } from '@angular/common';
 import { DashboardComponent } from './dashboard/dashboard.component';
 import { ListingService } from './service/listing.service';
 import { HttpClientModule } from '@angular/common/http';
+import { AccountComponent } from './account/account.component';
 
 
 
@@ -58,7 +59,8 @@ const firebaseUiAuthConfig: firebaseui.auth.Config = {
     RegisterComponent,
     AddPostComponent,
     FindSubListingComponent,
-    DashboardComponent
+    DashboardComponent,
+    AccountComponent
   ],
   imports: [
     BrowserModule,
