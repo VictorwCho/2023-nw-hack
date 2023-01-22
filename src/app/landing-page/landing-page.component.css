@@ -68,3 +68,17 @@ img {
     margin-top: 3em;
     margin-bottom: 4em;
 }
+
+.loginbtns-container {
+    display:flex;
+    justify-content: center;
+    
+}
+
+.acct {
+    background-color:#94afb0;
+    width: 200px;
+    height: 50px;
+    margin: 1em;
+    font-weight: 500;
+}
