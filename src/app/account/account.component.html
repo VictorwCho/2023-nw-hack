@@ -4,7 +4,7 @@
         My Profile
     </h1>
     <section>
-    <img class="h-50" src="./assets/profile.jpg" />
+    <img id="profile_pic" class="h-50" src="./assets/profile.jpg" />
 
     <form
     [formGroup] = "form"
@@ -13,18 +13,18 @@
         <thead>
         </thead>
         <tr>
-            <td class="border border-slate-400"><label for="firstName">First Name</label></td>
-            <td class="border border-slate-400"><input id="firstName" class="form-control" type="text" formControlName="firstName"></td>
+            <td class="border border-slate-400 p-2"><label for="firstName">First Name</label></ td>
+            <td class="border border-slate-400 p-2"><input id="firstName" class="form-control" type="text" formControlName="firstName"></td>
         </tr>
     
         <tr>
-            <td class="border border-slate-400"><label for="lastName">Last Name</label></td>
-            <td class="border border-slate-400"><input id="lastName" class="form-control" type="text" formControlName="lastName"></td>
+            <td class="border border-slate-400 p-2"><label for="lastName">Last Name</label></td>
+            <td class="border border-slate-400 p-2"><input id="lastName" class="form-control" type="text" formControlName="lastName"></td>
         </tr>
     
         <tr>
-            <td class="border border-slate-400"><label for="sport">Sports</label></td>
-            <td class="border border-slate-400"><select id="sport" class="form-control" formControlName="sports">
+            <td class="border border-slate-400 p-2"><label for="sport">Sports</label></td>
+            <td class="border border-slate-400 p-2"><select id="sport" class="form-control" formControlName="sports">
                 <option value="volleyball">Volleyball</option>
                 <option value="soccer">Soccer</option>
                 <option value="basketball">Basketball</option>
@@ -34,17 +34,19 @@
         </tr>
     
         <tr>
-            <td class="border border-slate-400"><label for="gender">Gender</label></td>
-            <td class="border border-slate-400"><input id="gender" class="form-control" type="text" formControlName="gender"></td>
+            <td class="border border-slate-400 p-2"><label for="gender">Gender</label></td>
+            <td class="border border-slate-400 p-2"><input id="gender" class="form-control" type="text" formControlName="gender"></td>
         </tr>
     
         </table>
-    
+    <div id="buttons">
         <button id="form-submit" class="btn btn-dark">Submit</button>
+        <button type="button" id="form-cancel" class="btn btn-dark" (click)="onCancel()">Cancel</button>
+        </div> 
     </form>
     
-    <div id="add-bottom">
-    <button id="form-cancel" class="btn btn-dark" (click)="onCancel()">Cancel</button>
-    </div>
+    <!-- <div id="add-bottom">
+    <button type="button" id="form-cancel" class="btn btn-dark" (click)="onCancel()">Cancel</button>
+    </div> -->
 </section>
 </main>
