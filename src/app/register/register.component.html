@@ -5,14 +5,22 @@
 <h1 class="text-center p-3">Resgister for a New Account!</h1>
 <form class="m-3">
   <div class="form-group p-2">
-    <label class="p-1" for="exampleInputEmail1">Email address</label>
-    <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Enter email" name="email" 
+    <label class="p-1" for="firstName">First Name</label>
+    <input type="text" class="form-control" id="firstName"  placeholder="Enter first name" name="firstName">
+  </div>
+  <div class="form-group p-2">
+    <label class="p-1" for="lastName">Last Name</label>
+    <input type="text" class="form-control" id="lastName"  placeholder="Enter last name" name="lastName" [(ngModel)]="lastName">
+  </div>
+  <div class="form-group p-2">
+    <label class="p-1" for="email">Email address</label>
+    <input type="email" class="form-control" id="email" aria-describedby="emailHelp" placeholder="Enter email" name="email" 
     [(ngModel)]="email">
     <small id="emailHelp" class="form-text text-muted p-2">We'll never share your email with anyone else.</small>
   </div>
   <div class="form-group p-2">
-    <label class="p-1" for="exampleInputPassword1">Password</label>
-    <input type="password" class="form-control" id="exampleInputPassword1" placeholder="Password" id="inline-password" type="password" name="password" [(ngModel)]="password">
+    <label class="p-1" for="email">Password</label>
+    <input type="password" class="form-control" id="email" placeholder="Password" id="inline-password" type="password" name="password" [(ngModel)]="password">
   </div>
   <div class="text-center">
   <button type="submit" class="btn btn-primary" (click)=register()>Submit </button>
