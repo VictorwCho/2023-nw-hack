@@ -7,6 +7,7 @@ import { RegisterComponent } from './register/register.component';
 import { FindSubListingComponent } from './find-sub-listing/find-sub-listing.component';
 import { AccountComponent } from './account/account.component';
 import { ListingsResolver } from './listings.resolver';
+import { LandingPageComponent } from './landing-page/landing-page.component';
 
 const routes: Routes = [
   { path: '', redirectTo:'login', pathMatch:'full'},
@@ -15,7 +16,8 @@ const routes: Routes = [
   { path: 'register', component: RegisterComponent},
   { path: 'account', component: AccountComponent},
   { path: 'find teams', component: FindSubListingComponent, resolve: { message: ListingsResolver }},
-  { path: 'find subs', component: AddPostComponent}
+  { path: 'find subs', component: AddPostComponent},
+  { path: 'home',component: LandingPageComponent}
   ]
 
 @NgModule({

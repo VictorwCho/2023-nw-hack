@@ -1,0 +1,70 @@
+#landing-img {
+    height: 800px;
+    background-image:linear-gradient(to bottom, rgba(0, 0, 0, 0.2), rgba(68, 98, 99, 0.65)), url('../../assets/landing.jpg');
+    
+}
+
+#landing-box {
+    display:flex;
+    justify-content:right;
+    align-items:center;
+    height: 800px;
+}
+
+#intro-right {
+    background-color: #293637;
+    margin-right: 300px;
+    color: white;
+    padding: 2em;
+    height: 500px;
+    max-width: 700px;
+
+}
+
+.landing-container {
+    height: 600px;
+    background-color: #94afb0;
+    padding: 3em;
+    
+}
+
+.icon-info-container {
+    display: flex;
+    justify-content: center;
+}
+
+.icon-info {
+    max-width: 300px;
+    margin: 2em;
+}
+
+h1 {
+    margin-bottom: 1em;
+}
+
+h2 {
+    text-align: center;
+    margin-bottom: 1em;
+}
+
+img {
+    display:block;
+    margin-left: auto;
+    margin-right: auto;
+    width: 120px;
+    height: 120px;
+    margin-bottom: 1em;
+}
+
+.img-sm {
+    width: 130px;
+    height: 130px;
+}
+
+.companylogo {
+    width: 200px;
+    height: 40px;
+    scale: 180%;
+    margin-top: 3em;
+    margin-bottom: 4em;
+}

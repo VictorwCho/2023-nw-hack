@@ -6,3 +6,10 @@ body {
     background-color: #293637;
     padding: 1em;
 }
+
+#nav-logo {
+    width: 200px;
+    height: 40px;
+    flex:100%;
+    margin: 0.5em;
+}

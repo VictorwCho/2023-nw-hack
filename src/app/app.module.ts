@@ -21,6 +21,7 @@ import { DashboardComponent } from './dashboard/dashboard.component';
 import { ListingService } from './service/listing.service';
 import { HttpClientModule } from '@angular/common/http';
 import { AccountComponent } from './account/account.component';
+import { LandingPageComponent } from './landing-page/landing-page.component';
 
 
 
@@ -60,7 +61,8 @@ const firebaseUiAuthConfig: firebaseui.auth.Config = {
     AddPostComponent,
     FindSubListingComponent,
     DashboardComponent,
-    AccountComponent
+    AccountComponent,
+    LandingPageComponent
   ],
   imports: [
     BrowserModule,
