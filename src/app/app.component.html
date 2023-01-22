@@ -1,9 +1,14 @@
-<!-- <div  *ngIf="fbAuth.user | async as user; else showLogin"> -->
-<router-outlet></router-outlet>
-<!-- </div> -->
-<!-- <ng-template #showLogin>
-    <firebase-ui (signInSuccessWithAuthResult)="successLoginCallback($event)"
-    (signInFailure)="errorLoginCallback($event)"></firebase-ui>
-</ng-template> -->
 
-<!-- <router-outlet></router-outlet> -->
+<div class="min-h-full">
+    <nav class="mx-auto bg-gray-800 px-6 py-4 flex justify-between content-center">
+        <section id="left-nav">
+            <h1 class="text-white font-bold text-lg">Name Of App</h1>
+        </section>
+        <section id="right-nav">
+            <a href="#" class="hover:bg-gray-700 text-white font-medium m-3 px-3 py-3 rounded-md">My Account</a>
+            <a href="#" class="hover:bg-gray-700 text-white font-medium m-3 px-3 py-3 rounded-md">Logout</a>
+        </section>
+    </nav>
+</div>
+<router-outlet></router-outlet>
+
