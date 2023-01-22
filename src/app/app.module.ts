@@ -9,7 +9,7 @@ import { FindSubListingComponent } from './find-sub-listing/find-sub-listing.com
 import {FirebaseUIModule, firebase, firebaseui} from 'firebaseui-angular';
 import {AngularFireModule} from '@angular/fire/compat';
 // import {AngularFireAuthModule} from '@angular/fire/compat/auth';
-import { environment } from 'src/environments/environment';
+import { environment } from 'environments/environment';
 // import { initializeApp,provideFirebaseApp } from '@angular/fire/app';
 // import { provideAuth,getAuth } from '@angular/fire/auth';
 import { LoginComponent } from './login/login.component';
@@ -49,7 +49,7 @@ import { ReactiveFormsModule } from '@angular/forms';
   declarations: [
     AppComponent,
     LoginComponent,
-    RegisterComponent
+    RegisterComponent,
     AddPostComponent,
     FindSubListingComponent
   ],
