@@ -29,6 +29,7 @@ export class FindSubListingComponent {
 
   ngOnInit() {
     //this.fetchListings();
+    console.log(this.ActivatedRoute.snapshot.data)
     this.listings = this.ActivatedRoute.snapshot.data['message'];
     console.log("FINDSUB",this.listings)
     
