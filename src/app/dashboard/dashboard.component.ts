@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { DashboardService } from '../service/dashboard.service';
+import { CommonModule } from '@angular/common';
 
 @Component({
   selector: 'app-dashboard',
@@ -12,7 +13,7 @@ export class DashboardComponent implements OnInit {
   constructor(private ds: DashboardService) {
     this.sports = []
   }
-  ngOnInit(): void {
+  ngOnInit() {
     this.sports = this.ds.getSports()
     console.log(this.sports)
   }
