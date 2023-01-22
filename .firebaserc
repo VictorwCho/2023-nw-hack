@@ -1,0 +1,14 @@
+{
+  "targets": {
+    "nw-hacks-2023-eb521": {
+      "hosting": {
+        "nw-hacks-2023": [
+          "nw-hacks-2023-eb521"
+        ]
+      }
+    }
+  },
+  "projects": {
+    "default": "nw-hacks-2023-eb521"
+  }
+}

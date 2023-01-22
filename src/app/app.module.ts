@@ -8,8 +8,13 @@ import { FindSubListingComponent } from './find-sub-listing/find-sub-listing.com
 
 import {FirebaseUIModule, firebase, firebaseui} from 'firebaseui-angular';
 import {AngularFireModule} from '@angular/fire/compat';
-import {AngularFireAuthModule} from '@angular/fire/compat/auth';
-import { environment } from '../environment';
+// import {AngularFireAuthModule} from '@angular/fire/compat/auth';
+import { environment } from 'src/environments/environment';
+// import { initializeApp,provideFirebaseApp } from '@angular/fire/app';
+// import { provideAuth,getAuth } from '@angular/fire/auth';
+import { LoginComponent } from './login/login.component';
+import { RegisterComponent } from './register/register.component';
+import { FormsModule } from '@angular/forms';
 import { ReactiveFormsModule } from '@angular/forms';
 import { CommonModule } from '@angular/common';
 import { DashboardComponent } from './dashboard/dashboard.component';
@@ -49,6 +54,8 @@ const firebaseUiAuthConfig: firebaseui.auth.Config = {
 @NgModule({
   declarations: [
     AppComponent,
+    LoginComponent,
+    RegisterComponent
     AddPostComponent,
     FindSubListingComponent,
     DashboardComponent
@@ -56,6 +63,7 @@ const firebaseUiAuthConfig: firebaseui.auth.Config = {
   imports: [
     BrowserModule,
     AppRoutingModule,
+<<<<<<< HEAD
     ReactiveFormsModule,
     AngularFireModule.initializeApp(environment.firebaseConfig),
     AngularFireAuthModule,
@@ -65,6 +73,12 @@ const firebaseUiAuthConfig: firebaseui.auth.Config = {
   ],
   providers: [
     ListingService
+=======
+    AngularFireModule.initializeApp(environment.firebase),
+    FormsModule,
+    ReactiveFormsModule
+
+>>>>>>> a8c9c27ac51ed0e2e8c80016f7bbd03d42fa726b
   ],
   bootstrap: [AppComponent]
 })
