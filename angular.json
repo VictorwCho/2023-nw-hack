@@ -91,6 +91,16 @@
             ],
             "scripts": []
           }
+        },
+        "deploy": {
+          "builder": "@angular/fire:deploy",
+          "options": {
+            "prerender": false,
+            "ssr": false,
+            "browserTarget": "nw-hacks-2023:build:production",
+            "firebaseProject": "nw-hacks-2023-eb521",
+            "firebaseHostingSite": "nw-hacks-2023-eb521"
+          }
         }
       }
     }
