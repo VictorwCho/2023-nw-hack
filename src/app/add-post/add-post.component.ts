@@ -1,5 +1,6 @@
 import { Component } from '@angular/core';
 import { FormControl, FormGroup, ReactiveFormsModule } from '@angular/forms';
+import { ListingService } from '../service/listing.service';
 
 @Component({
   selector: 'app-add-post',
@@ -10,7 +11,7 @@ export class AddPostComponent {
 
   form: FormGroup;
 
-  constructor() {
+  constructor(private ls:ListingService) {
     let formControls = {
       firstName: new FormControl(""),
       lastName: new FormControl(""),
@@ -35,7 +36,7 @@ export class AddPostComponent {
       skillLevel: values.skillLevel,
       position: values.position
     }
-
-    
+    console.log("adding",listing)
+    this.ls.addListing(listing)
   }
 }
