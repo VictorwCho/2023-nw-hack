@@ -7,14 +7,13 @@ import { RegisterComponent } from './register/register.component';
 import { FindSubListingComponent } from './find-sub-listing/find-sub-listing.component';
 
 const routes: Routes = [
-  { path: '', component: DashboardComponent},
   { path: '', redirectTo:'login', pathMatch:'full'},
   { path: 'login', component: LoginComponent},
   { path: 'dashboard', component: DashboardComponent},
   { path: 'register', component: RegisterComponent},
   { path: 'dashboard', component: DashboardComponent},
-  { path: 'find subs', component: FindSubListingComponent},
-  { path: 'add-listing', component: AddPostComponent}
+  { path: 'find teams', component: FindSubListingComponent},
+  { path: 'find subs', component: AddPostComponent}
   ]
 
 

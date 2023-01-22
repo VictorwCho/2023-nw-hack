@@ -5,8 +5,8 @@ import { Injectable } from '@angular/core';
 })
 export class DashboardService {
   sports_array = [
-    "Find Subs",
     "Find Teams",
+    "Find Subs",
     "Pick-Up Events",
     "Workshops",
     "My Account",
