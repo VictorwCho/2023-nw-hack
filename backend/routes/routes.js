@@ -1,7 +1,7 @@
 const express = require('express');
 const router = express.Router()
 const User = require('../models/user');
-const Listing = require('../models/add-listing')
+const Listing = require('../models/add-listing');
 
 
 // Post Method
@@ -11,11 +11,25 @@ router.post('/addUser', async (req, res) => {
     })
 
     try {
-        console.log('hello')
         const userToSave = await user.save();
         res.status(200).json(userToSave)
+    } catch (error) {
+        res.status(400).json({message: error.message})
     }
-    catch (error) {
+})
+
+router.put('/updateUser', async (req, res) => {
+    let uid = req.body.uid
+    let profile = req.body.profile
+    console.log(uid)
+    console.log(profile)
+    try {
+        User.collection.findOneAndUpdate(
+            {UID: `${uid}`},
+            {$addToSet:{profile}}
+        )
+        res.status(200).json("it worked")
+    } catch (error) {
         res.status(400).json({message: error.message})
     }
 })

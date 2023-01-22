@@ -39,6 +39,7 @@ export class AddPostComponent {
     }
     console.log("adding",listing)
     this.ls.addListing(listing)
+    this.router.navigate(['/dashboard'])
   }
 
   onCancel() {

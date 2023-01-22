@@ -1,5 +1,6 @@
 import { Component } from '@angular/core';
 import { AngularFireAuth } from '@angular/fire/compat/auth';
+import { AuthService } from './service/auth.service';
 
 @Component({
   selector: 'app-root',
@@ -12,6 +13,10 @@ import { AngularFireAuth } from '@angular/fire/compat/auth';
 export class AppComponent {
   title = 'nw-hacks-2023';
 
-  constructor(public fbAuth: AngularFireAuth) {}
+  constructor(public fbAuth: AngularFireAuth, private as: AuthService) {}
+
+  logOut() {
+    this.as.logout();
+  }
 
 }

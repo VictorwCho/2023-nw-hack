@@ -1,16 +1,50 @@
-<body>
-  <h1>My Profile</h1>
-  <div class="container" id="profile_card">
-    <div class="row">
-      <div class="col" id="profilepic">
-        <img class="h-50" src="./assets/profile.jpg" />
-      </div>
-      <div class="col" id="bio_info">
-        <div id="first_name">First Name : Samuel</div>
-        <div id="last_name">Last Name: Jungles</div>
-        <div id="sports">Sports Played : Soccer, Volleyball</div>
-        <div id="rating">Fun Rating : 7.8</div>
-      </div>
+<main>
+
+    <h1 class="display-3">
+        My Profile
+    </h1>
+    <section>
+    <img class="h-50" src="./assets/profile.jpg" />
+
+    <form
+    [formGroup] = "form"
+    (ngSubmit)="onSubmit(form.value)">
+        <table class="bg-white table shadow-lg">
+        <thead>
+        </thead>
+        <tr>
+            <td class="border border-slate-400"><label for="firstName">First Name</label></td>
+            <td class="border border-slate-400"><input id="firstName" class="form-control" type="text" formControlName="firstName"></td>
+        </tr>
+    
+        <tr>
+            <td class="border border-slate-400"><label for="lastName">Last Name</label></td>
+            <td class="border border-slate-400"><input id="lastName" class="form-control" type="text" formControlName="lastName"></td>
+        </tr>
+    
+        <tr>
+            <td class="border border-slate-400"><label for="sport">Sports</label></td>
+            <td class="border border-slate-400"><select id="sport" class="form-control" formControlName="sports">
+                <option value="volleyball">Volleyball</option>
+                <option value="soccer">Soccer</option>
+                <option value="basketball">Basketball</option>
+                <option value="ultimate">Ultimate Frisbee</option>
+                </select>
+            </td>
+        </tr>
+    
+        <tr>
+            <td class="border border-slate-400"><label for="gender">Gender</label></td>
+            <td class="border border-slate-400"><input id="gender" class="form-control" type="text" formControlName="gender"></td>
+        </tr>
+    
+        </table>
+    
+        <button id="form-submit" class="btn btn-dark">Submit</button>
+    </form>
+    
+    <div id="add-bottom">
+    <button id="form-cancel" class="btn btn-dark" (click)="onCancel()">Cancel</button>
     </div>
-  </div>
-</body>
+</section>
+</main>
