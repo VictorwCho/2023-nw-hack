@@ -13,7 +13,7 @@ const routes: Routes = [
   { path: 'dashboard', component: DashboardComponent},
   { path: 'register', component: RegisterComponent},
   { path: 'dashboard', component: DashboardComponent},
-  { path: 'find teams', component: FindSubListingComponent},
+  { path: 'find teams', component: FindSubListingComponent, resolve: { message:ListingsResolver }},
   { path: 'find subs', component: AddPostComponent}
   ]
 
