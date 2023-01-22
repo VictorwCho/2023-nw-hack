@@ -1,0 +1,12 @@
+
+body {
+    display:flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    background-color: #e5ebec;
+}
+
+section {
+    width: 50%;
+    max-width:70%;
+}
