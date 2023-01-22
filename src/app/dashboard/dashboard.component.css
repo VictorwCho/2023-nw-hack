@@ -1,11 +1,32 @@
+main {
+    background-color: #e5ebec;
+    height: 100%;
+}
 button {
     border: solid black;
-    margin: 1em;
-    padding: 5em;
-    width: 45%;
+    margin: 1.5em;
+    padding: 2em;
+    width: 25%;
+    height: 6em;
+    text-align: center;
+}
+
+button:hover {
+    background-color: #f0f2f5;
 }
 
 .template {
     display: flex;
     flex-direction: row;
+}
+
+#dashboard-btns {
+    display:flex;
+    flex-wrap:wrap;
+
+    max-width: 90%;
+    display: flex;
+    justify-content: center;
+    flex-wrap:wrap;
+    flex:100%;
 }

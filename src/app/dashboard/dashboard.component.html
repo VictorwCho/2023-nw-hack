@@ -1,11 +1,13 @@
 <!-- <body class="bg-gray-400 m-0"> -->
-
+<main>
+<section id="dashboard-btns" class="p-3">
 <ng-template ngFor let-sport [ngForOf]="sports" class="template">
-  <button (click)="navigateTo($event)">
+  <button class="card shadow-sm mb-2 display-6" (click)="navigateTo($event)">
     {{sport}}
   </button>
-
 </ng-template>
+</section>
+</main>
 
   <!-- <main>
     <div class="grid-cols-2">

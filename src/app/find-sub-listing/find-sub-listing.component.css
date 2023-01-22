@@ -2,6 +2,7 @@ main {
     display:flex;
     justify-content: center;
     flex-wrap: wrap;
+    background-color: #e5ebec;
 }
 .card-body {
     display:flex;
