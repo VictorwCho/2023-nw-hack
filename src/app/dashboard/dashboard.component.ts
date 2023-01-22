@@ -16,8 +16,8 @@ export class DashboardComponent implements OnInit {
   }
 
   navigateTo(event:any) {
-    console.log(event.target.innerText)
-    let target_name = event.target.innerText
+    // console.log(event.target.innerText)
+    let target_name = event
     let blah = target_name.toLowerCase()
     console.log(typeof(blah))
     console.log(blah)

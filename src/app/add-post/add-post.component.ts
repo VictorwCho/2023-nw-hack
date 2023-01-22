@@ -1,5 +1,6 @@
 import { Component } from '@angular/core';
 import { FormControl, FormGroup, ReactiveFormsModule } from '@angular/forms';
+import { Router } from '@angular/router';
 import { ListingService } from '../service/listing.service';
 
 @Component({
@@ -11,7 +12,7 @@ export class AddPostComponent {
 
   form: FormGroup;
 
-  constructor(private ls:ListingService) {
+  constructor(private ls:ListingService,private router: Router) {
     let formControls = {
       firstName: new FormControl(""),
       lastName: new FormControl(""),
@@ -38,5 +39,9 @@ export class AddPostComponent {
     }
     console.log("adding",listing)
     this.ls.addListing(listing)
+  }
+
+  onCancel() {
+    this.router.navigate(['dashboard'])
   }
 }
