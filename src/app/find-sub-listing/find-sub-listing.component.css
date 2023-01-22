@@ -1,0 +1,45 @@
+main {
+    display:flex;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+.card-body {
+    display:flex;
+    justify-content: space-between;
+    flex-wrap:wrap;
+}
+
+#listing-header {
+    text-align: center;
+    flex: 100%;
+}
+
+p {
+    margin: 0;
+}
+
+h5 {
+    flex:100%
+}
+
+#listing-block {
+    max-width: 80%;
+    display: flex;
+    justify-content: center;
+    flex-wrap:wrap;
+    flex:100%;
+}
+
+.card {
+    max-width: 60%;
+    padding: 1em;
+    flex:100%;
+}
+
+.card:hover {
+    background-color: #f0f2f5;
+}
+
+#listing-right {
+    text-align: right;
+}
