@@ -1,6 +1,11 @@
 <!-- <body class="bg-gray-400 m-0"> -->
 
+<ng-template ngFor let-sport [ngForOf]="sports" class="template">
+  <button (click)="navigateTo($event)">
+    {{sport}}
+  </button>
 
+</ng-template>
 
   <!-- <main>
     <div class="grid-cols-2">

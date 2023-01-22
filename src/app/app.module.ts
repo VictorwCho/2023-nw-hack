@@ -72,6 +72,7 @@ const firebaseUiAuthConfig: firebaseui.auth.Config = {
   ],
   providers: [
 
+
   ],
   bootstrap: [AppComponent]
 })

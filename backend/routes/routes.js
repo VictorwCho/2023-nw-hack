@@ -1,13 +1,12 @@
 const express = require('express');
 const router = express.Router()
-const Model = require('../models/model')
+const User = require('../models/user');
+const Listing = require('../models/add-listing')
 
 // Post Method
-router.post('/post', async (req, res) => {
-    console.log('hello')
-    const user = new Model({
-        name:req.body.name,
-        gender:req.body.gender
+router.post('/addUser', async (req, res) => {
+    const user = new User({
+        UID:req.body.UID,
     })
 
     try {
@@ -32,9 +31,7 @@ router.delete('/delete/:id', (req, res) => {
 
 //Create new sub listing
 router.post("/addListing", async (req,res) => {
-    console.log("ADDING BACKEND")
-    res.send("TEST")
-    const listings = new Model({
+    const listings = new Listing({
         firstName: req.body.firstName,
         lastName: req.body.lastName,
         date: req.body.date,
@@ -46,20 +43,11 @@ router.post("/addListing", async (req,res) => {
     })
    
     try {
-        const listing = req.body;
-        const result = await collections.listings.insertOne(listing)
-
-        res.status(201).send("Created new listing")
-        console.log("hello")
-        // if (result.acknowledged) {
-        //     res.status(201).send("Created new listing")
-        //     console.log("hello")
-        // } else {
-            //res.status(500).send("Failed to create new listing")
-        //}
+        const result = await listings.save()
+        res.status(200).json(result)
     } catch (error) {
         console.error(error);
-        res.status(400).send(error.message)
+        res.status(400).json({message: error.message})
     }
 })
 

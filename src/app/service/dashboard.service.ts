@@ -5,13 +5,15 @@ import { Injectable } from '@angular/core';
 })
 export class DashboardService {
   sports_array = [
-    "basketball",
-    "volleyball",
-    "ultimate frisbee",
+    "Find Subs",
+    "Find Teams",
+    "Pick-Up Events",
+    "Workshops",
+    "My Account",
   ]
   constructor() { }
 
-  getSports () {
+  getSports() {
     return this.sports_array
   }
 }

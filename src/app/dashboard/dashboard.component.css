@@ -1,0 +1,11 @@
+button {
+    border: solid black;
+    margin: 1em;
+    padding: 5em;
+    width: 45%;
+}
+
+.template {
+    display: flex;
+    flex-direction: row;
+}
