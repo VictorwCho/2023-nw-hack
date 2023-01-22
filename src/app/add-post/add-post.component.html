@@ -4,7 +4,9 @@
     Hello world!
   </h1>
 
-<form>
+<form
+[formGroup] = "form"
+(ngSubmit)="onSubmit(form.value)">
     <table class="bg-white table-auto shadow-lg">
     <thead>
         <th>Test</th>
@@ -58,5 +60,5 @@
     </table>
 
     <button>Submit</button>
-    <button>Cancel</button>
 </form>
+<button>Cancel</button>
