@@ -1,0 +1,24 @@
+
+<div class="grid justify-items-center max-h-screen">
+    <section id="listing-header">
+        <h1 class="font-bold">Looking for Sub</h1>
+    </section>
+    <section id="listing-block" class="container bg-slate-200 max-w-screen-[70%] rounded-xl grid justify-items-center h-5/6 max-h-full">
+        <ng-template ngFor let-listing [ngForOf]="listings">
+            <section class="listing bg-white rounded-xl shadow-md overflow-hidden w-full md:max-w-2xl max-h-fit my-1 p-2 flex justify-between hover:bg-gray-100">
+                <div id="listing-left">
+                    <h1 class="font-bold text-lg">1 player needed!</h1>
+                    <p class="text-base text-slate-500">{{ listing.sport }}</p>
+                    <p class="text-base text-slate-500">Date Needed: {{ listing.date }}</p>
+                    <p class="text-base text-slate-500">Looking for: {{ listing.gender }}</p>
+
+                </div>
+                <div id="listing-right">
+                <br>
+                <p class="text-base text-slate-500">{{ listing.skillLevel }}</p>
+                <p class="text-base text-slate-500">{{ listing.location }}</p>
+                </div>
+            </section>
+        </ng-template>
+    </section>
+</div>

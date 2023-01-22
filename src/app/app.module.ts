@@ -3,6 +3,8 @@ import { BrowserModule } from '@angular/platform-browser';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
+import { AddPostComponent } from './add-post/add-post.component';
+import { FindSubListingComponent } from './find-sub-listing/find-sub-listing.component';
 
 import {FirebaseUIModule, firebase, firebaseui} from 'firebaseui-angular';
 import {AngularFireModule} from '@angular/fire/compat';
@@ -39,7 +41,9 @@ const firebaseUiAuthConfig: firebaseui.auth.Config = {
 
 @NgModule({
   declarations: [
-    AppComponent
+    AppComponent,
+    AddPostComponent,
+    FindSubListingComponent
   ],
   imports: [
     BrowserModule,
