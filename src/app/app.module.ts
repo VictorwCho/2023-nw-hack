@@ -63,22 +63,15 @@ const firebaseUiAuthConfig: firebaseui.auth.Config = {
   imports: [
     BrowserModule,
     AppRoutingModule,
-<<<<<<< HEAD
     ReactiveFormsModule,
-    AngularFireModule.initializeApp(environment.firebaseConfig),
-    AngularFireAuthModule,
+    AngularFireModule.initializeApp(environment.firebase),
     FirebaseUIModule.forRoot(firebaseUiAuthConfig),
     CommonModule,
-    HttpClientModule
+    HttpClientModule,
+    FormsModule
   ],
   providers: [
-    ListingService
-=======
-    AngularFireModule.initializeApp(environment.firebase),
-    FormsModule,
-    ReactiveFormsModule
 
->>>>>>> a8c9c27ac51ed0e2e8c80016f7bbd03d42fa726b
   ],
   bootstrap: [AppComponent]
 })
